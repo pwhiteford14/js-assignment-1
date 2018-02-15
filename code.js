@@ -7,8 +7,7 @@
 
 "use strict";
 const Prompt = require('readline-sync');
-let bedroomAmount, bathroomAmount, garageSize, lotNumber;
-let basePrice, bedroomPrice, bathroomPrice, garageSizePrice, total;
+let bedroomAmount, bathroomAmount, garageSize, lotNumber, total;
 
 
 /**
@@ -34,23 +33,24 @@ main();
     }
 
     function setBathroomAmount () {
-        bathroomAmount = Prompt.question("Enter your Preferred Amount of Bathrooms")
+        bathroomAmount = Number(Prompt.question("Enter your Preferred Amount of Bathrooms"));
     }
 
     function setBedroomAmount () {
-        bathroomAmount = Prompt.question("Enter your Preferred Amount of Bedrooms ")
+        bathroomAmount = Number(Prompt.question("Enter your Preferred Amount of Bedrooms "));
     }
 
     function setGarageSize() {
-        garageSize = Prompt.question("Enter your Preferred amount of car space for your new garage")
+        garageSize = Number(Prompt.question("Enter your Preferred amount of car space for your new garage"));
     }
 
     function calcPrice() {
-        bedroomPrice= 17000;
-        bathroomPrice = 12500;
-        basePrice = 50000;
-        garageSizePrice = 6000;
-        total = (bedroomPrice * bedroomAmount)+  (bathroomPrice * bathroomAmount) + (garageSize * garageSizePrice) + basePrice;
+        const BEDROOM_PRICE = 17000;
+        const BATHROOM_PRICE = 12500;
+        const BASE_PRICE = 50000;
+        const GARAGE_SIZE_PRICE = 6000;
+        total = (BEDROOM_PRICE * bedroomAmount)+  (BATHROOM_PRICE * bathroomAmount) + (garageSize * GARAGE_SIZE_PRICE) + BASE_PRICE;
+
     }
 
 
