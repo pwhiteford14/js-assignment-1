@@ -2,9 +2,8 @@
 * @Author Whiteford, Parker (pwhiteford02@gmail.com)
 * @version 0.0.1
  * @summary code stuff
-*@todo Everything
+*@todo fix Nan
 * */
-
 "use strict";
 const Prompt = require('readline-sync');
 let bedroomAmount, bathroomAmount, garageSize, lotNumber, total;
@@ -18,26 +17,26 @@ let bedroomAmount, bathroomAmount, garageSize, lotNumber, total;
  **/
 
 function main() {
-setLotNumber();
-setBathroomAmount();
-setBedroomAmount();
-setGarageSize();
-calcPrice();
-console.log("your Home plot lot" + lotNumber +  "will cost in total" + total + "dollars")
-}
+        setLotNumber();
+        setBathroomAmount();
+        setBedroomAmount();
+        setGarageSize();
+        calcPrice();
+        totalCalc();
+    }
 
 main();
 
-    function setLotNumber() {
-        lotNumber = Prompt.question("Enter your Lot Number");
-    }
+function setLotNumber() {
+    lotNumber = Prompt.question("Enter your Lot Number: ");
+}
 
-    function setBathroomAmount () {
-        bathroomAmount = Number(Prompt.question("Enter your Preferred Amount of Bathrooms"));
+function setBathroomAmount () {
+        bathroomAmount = Number(Prompt.question("Enter your Preferred Amount of Bathrooms: "));
     }
 
     function setBedroomAmount () {
-        bathroomAmount = Number(Prompt.question("Enter your Preferred Amount of Bedrooms "));
+        bedroomAmount = Number(Prompt.question("Enter your Preferred Amount of Bedrooms:  "));
     }
 
     function setGarageSize() {
@@ -49,14 +48,14 @@ main();
         const BATHROOM_PRICE = 12500;
         const BASE_PRICE = 50000;
         const GARAGE_SIZE_PRICE = 6000;
-        total = (BEDROOM_PRICE * bedroomAmount)+  (BATHROOM_PRICE * bathroomAmount) + (garageSize * GARAGE_SIZE_PRICE) + BASE_PRICE;
-
+        console.log(bedroomAmount);
+        total = (BEDROOM_PRICE * bedroomAmount) + (BATHROOM_PRICE * bathroomAmount) + (garageSize * GARAGE_SIZE_PRICE) + BASE_PRICE;
+        console.log(total);
+    //this calculates things
     }
 
-
-
-
-
-
+    function totalCalc () {
+       console.log()
+    }
 
 
