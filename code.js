@@ -36,11 +36,11 @@ function setBathroomAmount () {
     }
 
     function setBedroomAmount () {
-        bedroomAmount = Number(Prompt.question("Enter your Preferred Amount of Bedrooms:  "));
+        bedroomAmount = Number(Prompt.question("Enter your Preferred Amount of Bedrooms: "));
     }
 
     function setGarageSize() {
-        garageSize = Number(Prompt.question("Enter your Preferred amount of car space for your new garage"));
+        garageSize = Number(Prompt.question("Enter your Preferred amount of car space for your new garage: "));
     }
 
     function calcPrice() {
@@ -48,14 +48,12 @@ function setBathroomAmount () {
         const BATHROOM_PRICE = 12500;
         const BASE_PRICE = 50000;
         const GARAGE_SIZE_PRICE = 6000;
-        console.log(bedroomAmount);
         total = (BEDROOM_PRICE * bedroomAmount) + (BATHROOM_PRICE * bathroomAmount) + (garageSize * GARAGE_SIZE_PRICE) + BASE_PRICE;
-        console.log(total);
     //this calculates things
     }
 
     function totalCalc () {
-       console.log()
+       console.log("the estimated price of your new home on lot " + lotNumber + " will be $" + total );
     }
 
 
