@@ -1,8 +1,8 @@
 /**
 * @Author Whiteford, Parker (pwhiteford02@gmail.com)
-* @version 0.0.1
- * @summary code stuff
-*@todo fix Nan
+* @version 1.0
+ * @summary calculates price of new home
+*@todo nothing
 * */
 "use strict";
 const Prompt = require('readline-sync');
